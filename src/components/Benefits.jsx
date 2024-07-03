@@ -5,12 +5,12 @@ import { IoIosArrowForward } from "react-icons/io";
 const Benefits = () => {
   const [hovered, setHovered] = useState(-1);
   return (
-    <div className="md:px-5 lg:px-20">
+    <div className="px-2 md:px-10 lg:px-20" id="features">
       <h1 className="text-5xl font-medium text-white text-center">
         Chat Smarter, Not Harder <br />
         with Brainwave
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-3 lg:gap-5 xl:gap-10 mt-20">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-3 lg:gap-5 xl:gap-10 mt-20">
         {benefits.map((item, index) => (
           <div
             className={`bg-n-7 p-5 md:p-3 lg:p-5  xl:p-10 rounded-xl relative w-[calc(100%-20px)] mx-auto md:w-full ${

@@ -5,7 +5,7 @@ import Button from "./Button";
 
 const Collaboration = () => {
   return (
-    <div className="px-5 lg:px-20 my-20 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-0 relative">
+    <div className="px-2 md:px-10 lg:px-20 my-20 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-0 relative">
       <div>
         <h1 className="text-5xl font-medium font-col leading-[120%]">
           AI Chat App for
@@ -21,7 +21,9 @@ const Collaboration = () => {
                 <img src={check} alt="check icon" />
                 <p>{item.title}</p>
               </div>
-              <p className="text-n-4 w-1/3 mt-5">{item.text}</p>
+              <p className="text-n-4  w-full md:w-2/3 lg:w-1/3 mt-5">
+                {item.text}
+              </p>
             </div>
           ))}
         </div>

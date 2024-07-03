@@ -9,7 +9,10 @@ import Button from "./Button";
 const Hero = () => {
   return (
     <>
-      <div className="absolute top-0 left-0 w-full h-[500px] gradient"></div>
+      <div
+        className="absolute top-0 left-0 w-full h-[500px] gradient"
+        id="hero"
+      ></div>
       <div className="mb-10 mt-20 text-center relative z-20">
         <h1 className="h1 py-2">
           Explore the Possibilities

@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
-import { brainwave } from "../assets";
+import { brainwave, robot } from "../assets";
 import { navigation } from "../constants";
 import { IoMenu, IoCloseOutline } from "react-icons/io5";
 
@@ -37,7 +37,7 @@ const Navbar = () => {
         <a className="block w-[12rem] xl:mr-8" href="#hero">
           <img
             src={brainwave}
-            className="max-w-[120px] md:max-w-[190px]"
+            className="max-w-[140px] md:max-w-[190px]"
             alt="Brainwave"
           />
         </a>
@@ -45,8 +45,13 @@ const Navbar = () => {
         <nav
           className={`${
             openNavigation ? "flex" : "hidden"
-          } fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent`}
+          } fixed top-[72px] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent  z-50`}
         >
+          <div
+            className="block lg:hidden absolute  top-[0rem] left-0  h-full w-full opacity-10 bg-no-repeat bg-cover bg-center "
+            style={{ backgroundImage: `url(${robot})` }}
+          ></div>
+
           <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row">
             {navigation.map((item) => (
               <a

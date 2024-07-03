@@ -12,10 +12,10 @@ import {
 import { brainwaveServices, brainwaveServicesIcons } from "../constants";
 import SearchBar from "./HomeComponents/SearchBar";
 
-const Generative = () => {
+const Services = () => {
   const [hovered, setHovered] = useState(-1);
   return (
-    <div className="md:px-5 lg:px-40">
+    <div className="px-2 md:px-10 lg:px-20" id="services">
       <h1 className="text-5xl font-medium text-center mb-4">
         Generative AI made for creators.
       </h1>
@@ -32,7 +32,10 @@ const Generative = () => {
                 Brainwave unlocks the potential of AI-powered applications
               </p>
               {brainwaveServices.map((item, index) => (
-                <div className="flex flex-row gap-4 border-t-[1px] border-n-5 py-4">
+                <div
+                  className="flex flex-row gap-4 border-t-[1px] border-n-5 py-4"
+                  key={index}
+                >
                   <img src={check} alt="check icon" />
                   <p>{item}</p>
                 </div>
@@ -47,9 +50,9 @@ const Generative = () => {
           <SearchBar />
         </div>
       </div>
-      <div className="grid grid-cols-2 gap-5 w-full h-[750px] mt-5">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 w-full  mt-5">
         <div
-          className="bg-no-repeat bg-cover   bg-right h-[full] w-full border-[1px] border-n-6 rounded-3xl overflow-hidden relative"
+          className="bg-no-repeat bg-cover bg-right h-full w-full border-[1px] border-n-6 rounded-3xl overflow-hidden relative"
           style={{ backgroundImage: `url(${service2})` }}
         >
           <div className="absolute bottom-20 left-0 w-full z-10 flex justify-center">
@@ -62,9 +65,19 @@ const Generative = () => {
             </div>
           </div>
           <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-n-6 to-n-8 opacity-20"></div>
+          <div className="absolute top-10 right-10 bg-black px-5 pt-3 pb-7 w-72 rounded-lg  mt-10 ml-10 font-code">
+            Hey Brainwave, enhance this photo
+            <img
+              src={arrow1}
+              className="absolute bottom-0 -right-7 overflow-hidden"
+              height={40}
+              width={40}
+              alt="arrow img"
+            />
+          </div>
         </div>
-        <div className="w-full h-full bg-n-7 p-2 rounded-3xl">
-          <div className="p-7">
+        <div className="w-full h-full bg-n-7 p-2 rounded-3xl relative">
+          <div className="p-2 md:p-7">
             <h1 className="text-4xl font-medium mt-10 mb-5">
               Video generation
             </h1>
@@ -89,10 +102,10 @@ const Generative = () => {
           </div>
 
           <div
-            className="w-full h-[450px] bg-cover bg-n-8 bg-no-repeat rounded-xl overflow-hidden"
+            className="w-full h-[450px] bg-cover bg-n-8 bg-no-repeat rounded-xl overflow-hidden "
             style={{ backgroundImage: `url(${service3})` }}
           >
-            <div className="bg-n-6 px-5 pt-5 pb-8 w-72 rounded-lg relative mt-10 ml-10">
+            <div className="bg-n-6 px-5 pt-3 pb-7 w-72 rounded-lg relative mt-10 ml-10 font-code">
               Video generated!
               <img
                 src={arrow2}
@@ -109,7 +122,7 @@ const Generative = () => {
                   alt="icon"
                 />
               </div>
-              <p className="absolute bottom-3 right-3 text-sm text-n-4">
+              <p className="absolute bottom-2 right-2 text-xs text-n-4">
                 Just Now
               </p>
             </div>
@@ -120,4 +133,4 @@ const Generative = () => {
   );
 };
 
-export default Generative;
+export default Services;
